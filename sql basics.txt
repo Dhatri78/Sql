@@ -1,0 +1,151 @@
+Todays AGENDA
+===================
+WHAT IS DATABASE?
+COLLECTION OF DATA WHICH IS USED TO STORE LARGE AMOUNT OF DATA
+ex:data of students in aditya
+----------------------------
+WHAT IS DBMS?
+database management system(DBMS)
+IT IS A SOFTWARE APPLICATION USED TO INTERACT WITH DATABASE
+*DBMS WILL ACT AS A BRIDGE,WHICH CONNECTS THE USER & DATABASE  (--USER---DBMS----DATABASE)
+----------------------------------------------------
+WHAT ARE THE TYPES OD DATABASES?
+RELATIONAL :DATA IS STORED IN THE FORM OF TABLES
+EX:MYSQL,ORACLESQL,POSTGRESQL,SQL SERVER
+---------------------------------------------------
+NON-RELATIONAL:DATA IS STORED IN THE FORM OF KEY VALUE PAIRS.
+EX:MONGODB,FIREBASE
+-------------------------------
+HIERARCHICAL:IN THIS DATA IS STORED IN TREE-LIKE STRUCTURE
+EX:IBM INFORMATION MANAGEMENT SYSTEM
+--------------------------------------------
+OBJECT-ORIENTED:IN THIS DATA IS STORED IN THE FORM OF OBJECTS.USED IN OBJECT-ORIENTED PROGRAMMING
+EX:OBJECT DATABASE
+----------------------------------------------
+CLOUD DATABASES:DATA IS STORED IN CLOUD
+EX:GOOGLE CLOUD,AMAZON RDS,AZURE...............
+--------------------------------------------------------------------------------
+INTRODUCTION TO SQL?
+SQL-STRUCTURED QUERY LANGUAGE
+SQL IN STARTED IN 1970 IN IBM WITH DIFFFERENT NAME CALLLED SEQUEL
+*IN SQL DATA IS STORED IN THE FORM OF TABLES
+*IN TABLES WE HAVE ROWS AND COLUMNS
+*ROWS ARE CALLED AS RECORDS
+*COLUMNS ARE CALLED AS FIELDS
+*WE CAN STORE HUGE AMOUNTS OF DATA
+*MYSQL,ORACLESQL,POSTGRESQL,SQL SERVER
+---------------------------------------------------------------------------------
+DATA TYPES IN SQL?
+*NUMERIC DATATYPES:
+-INTEGER TYPES:
+------------------            SIGNED INT (+ OR -)                  UNSIGNED INT(+VE VALUES INCLUDE ZERO)
+*TINYINT--- 1 BYTE ---------   (-128 TO +127)                         (0 TO 2^8-1)(255)            
+*SMALLINT---- 2 BYTES----------  (-2^15 TO +2^15 -1)                  (0 TO 2^16-1)
+*MEDIUMINT---- 3 BYTES----------   (-2^23 TO +2^23 -1)                  (0 TO 2^24-1)
+*INT---------- 4 BYTES------------- (2^31 TO +2^31 -1)                  (0 TO 2^32-1)
+*BIGINT-- 8 BYTES-------------------- (2^63 TO +2^63 -1)                  (0 TO 2^64-1)
+----------------------------------------------------------------------------------------------------------------------------------
+-FLOATING POINT TYPES:
+FLOAT:4 BYTES-----IT CAN TAKE THE VALUES UPTO 7 DDECIMALS
+                       12.0124547689498320(12.0124547)
+DOUBLE:8 BYTES---IT CAN TAKE VALUES UPTO 15/16 DECIMALS
+DECIMAL(m,d):IT VARIES BASED ON NUMBER THAT WILL BE GIVEN
+m- MAXIMUM TOTAL NO OF DIGITS (BOTH LEFT AND RIGHTOF DECIMALS) IN NUMBER
+d----- MAXIMUM NUMBER OF DIGITS AFTER THE DECIMAL POINT
+DECIMAL(5,2)
+--------------------------------------------------------------------------------
+*STRING DATATYPES:
+CHAR:FIXED LENGTH
+VARCHAR:VARIABLE LENGTH BASED ON CHARACTERS 
+TEXT:VARIABLE LENGTH -- UPTO 4 GB
+---------------------------------------------------------------------------------------------------
+*DATE AND TIME DATATYPES:  
+-DATE:'YYYY-MM-DD'----(1000-01-01 TO 9999-12-31)---------3 BYTES
+-TIME:'HH:MM:SS'----------------- 3 BYTES
+-DATETIME:'YYYY-MM-DD HH:MM:SS'----------- 8 BYTES
+-TIMESTAMP:'YYYY-MM-DD HH:MM:SS'  ------------- 4 BYTES----(IT MODIFIES AUTOMATICALLY BASED ON SYSTEM DATE)
+-YEAR :    YYYY------(1901 TO 2155)------------ 1 BYTE
+--------------------------------------------------------------------------------------------
+*MISC DATATYPES;
+-ENUM-STRING OBJECTS OF SINGLE VALUES FROM PREDEFINED VALUES
+ENUM('MALE','FEMALE')
+-SET-STRING OBJECTS:STRING OBJECTS OF MULTIPLE  VALUES FROM PREDEFINED VALUES
+SET('GREEN','BLUE','RED','YELLOW')
+------------------------------------------------------------------------------------------------------------------------
+SQL COMMANDS?
+______________________________________________________________________________________________________________________________________
+
+
+-DDL(DATA DEFINITION LANGUAGE):
+*WE CAN DEFINE THE COMPLETE STRUCTURE OF THE TABLE
+CREATION,MODIFICATIONS,& DROP THE TABLE STRUCTURE
+EX:STUDENT TABLES:
+                        ROLL NO:     NAME    CLG      BRANCH    DOB
+
+CREATE ,ALTER,DROP,TRUNCATE
+--------------------------------------------------------------------------------------------
+-DML(DATA MANIPULATION LANGUAGE):
+---WE CAN MANIPULATE THE DATA INTO THE TABLE
+---INSERT,MODIFY,DELETE
+-----COMMADS: INSERT UPDATE,DELETE
+---------------------------------------------------------------------
+-DQL(DATA QUERY LANGUAGE):
+--WE CAN RETRIVE THE DATA FFROM TABLES
+---SELECT
+------------------------------------------------------------------------
+-DCL(DATA CONTROL LANGUAGE):
+---WE CAN  CONTROL THE DATA ACCESS FROM DATABASE
+--- GRANT,REVOKE
+----------------------------------------------------------------------------------------------------------------------------------
+-TCL( TRANSACTION CONTROL LANGUAGE):
+--WE CAN CONTROL ALL TRANSACTIONS IN DATABASE
+COMMANDS: COMMIT,ROLLBACK,SAVEPOINT
+---------------------------------------------------------------------------------------------------------------------
+CREATION OF TABLES: 
+--SYNTAX:
+            CREATE TABLE NAME(COL1 COL1_DATA_TYPE,
+                              COL2 COL2_DATA_TYPE,
+                              COL3 COL3_DATA_TYPE,
+                              COL4 COL4_DATA_TYPE,
+                              COL5 COL5_DATA_TYPE,
+                              COL6 COL6_DATA_TYPE,
+                              ........................
+                              COLN COLN_DATA_TYPE,
+ ----------------------------------------------------------------------------------
+STUDENT TABLE:
+                       CREATE TABLE STUDENTS (
+                                   ROLL NO  VARCHAR(20),
+                                   NAME VARCHAR(100),
+                                   BRANCH VARCHAR(10),
+                                   CLG VARCHAR(50),
+                                   DOB DATE,
+                                   FEE INT
+                                   );
+------------------------------------
+SELECT * RETRIEVING COMPLETE DATA
+SELECT * FROM  STUDENTS;
+___________________________________________________________________________________________________________________________
+INSERTION OF DATA INTO TABLES:
+ALL COLUMNS INSERTION:
+INSERT INTO TABLE_NAME VALUES (COL1,COL2,COL3,COL4,.......);
+FEW COLUMNS INSRRTION:
+INSERT INTO TABLE_NAME(COL1,COL2,) VALUES (COL1_VALUE,COL2_VALUE);
+----------------------------------------------------------------------
+INSERT INTO STUDENTS VALUES('22A91A04O9','S.SHANMUKHA','ECE','ADITYA','2005-05-19',85000);
+
+
+
+INSERT INTO STUDENTS(ROLL NO,NAME,DOB) VALUES('22A91A04P5','DHATRI','2004-05-15');
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
