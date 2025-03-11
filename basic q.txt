@@ -1,0 +1,100 @@
+ALTER TASKS:
+
+1) Employees Table
+
+CREATE TABLE employees (
+    emp_id INT,  
+    emp_name VARCHAR(255), 
+    salary FLOAT,        
+    hire_date DATE,                            
+    Location TEXT,                               
+);
+
+Questions:
+Add a New Columns
+1. Add a new column "DOJ".
+2. Add two new columns "Phone_Number" & "email".
+
+Drop Columns
+1. Drop a column "Location".
+2. Drop two columns "email" & "phone_number".
+
+Modify Column Data Type
+1. Modify salary column data type from FLOAT to DECIMAL(10,2)
+2. Reduce the Emp_Name size to 150 characters 
+
+Rename the column names
+1. Rename the column Hire_date to Joining_Date
+2. Rename the column Location to Address
+
+Rename the table names
+1. Rename Employees to Staff_Members
+2. Rename Employees to Staff_Members & Departments to Company_Dept
+
+Add a Primary Key
+1. set emp_id as Primary Key
+2. Modify emp_id to be auto increment for automatic ID generation
+
+Add a Foreign Key
+1. Add dept_id column to the employees table
+2. Set dept_id as FOREIGN KEY in employees table from departments table 
+
+Add a Unique Constraint
+1. Add unique constraint to email column
+2. Add unique constraint to phone_number column
+
+Drop a Constraint
+1. Drop a Constraint unique_email
+2. Drop a Constraint unique_phone
+3. Drop a Primary Key Constraint
+
+======================================
+2) IPL_Teams Table
+
+CREATE TABLE ipl_teams (
+    team_id INT 
+    team_name VARCHAR(100),        
+    home_city VARCHAR(100),                
+    championships_won SMALLINT,    
+    established_year YEAR                  
+);
+
+Questions:
+Add a New Columns
+1. Add a new column named coach_name of type VARCHAR(100) to store the head coach's name.
+2. Add a column named stadium_name of type VARCHAR(150) to store the team's home stadium.
+
+Drop Columns
+1. Remove the championships_won column from the table.
+2. Remove the home_city column from the table.
+
+Modify Column Data Type
+1. Increase the length of team_name from VARCHAR(100) to VARCHAR(150).
+2. Modify championships_won to be NOT NULL.
+
+Rename the column names
+1. Rename home_city to city_name while keeping the datatype the same.
+2. Rename established_year to founding_year.
+
+Rename the table names
+1. Rename the table ipl_teams to cricket_teams.
+2. Rename the table cricket_teams to tournament_teams.
+
+Add a Primary Key
+1. Set team_id as the primary key of the ipl_teams table.
+2. Add a composite primary key using team_id and team_name.
+
+Add a Foreign Key
+1. Add a foreign key stadium_id to ipl_teams referencing stadiums(stadium_id).
+2. Add a foreign key city_id to ipl_teams referencing cities(city_id). 
+
+Add a Constraint
+1. Add a UNIQUE constraint to team_name to ensure no two teams have the same name.
+2. Add a CHECK constraint to championships_won to ensure it cannot be negative.
+
+Drop a Constraint
+1. Remove the UNIQUE constraint from team_name.
+2. Remove the CHECK constraint on championships_won.
+3. Drop a Primary Key Constraint
+
+
